@@ -14,7 +14,7 @@ def static_pages():
 @app.route('/customer_p')
 def customer_p():
     return render_template('customer_p.html', customers=get_customer_p())
-
+#this will display all the songs for now
 @app.route('/display')
 def display():
     return render_template('display.html', songs=get_songs())
