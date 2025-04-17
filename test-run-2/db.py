@@ -22,13 +22,18 @@ def open_connection():
     except pymysql.MySQLError as e:
         return e
     return conn
-
 def get_songs():
     conn = open_connection()
     with conn.cursor() as cursor:
-        cursor.execute('SELECT * FROM songs;')
+        cursor.execute("SELECT * FROM songs")
         songs = cursor.fetchall()
-        return songs    
+        return songs 
+def get_customer_p():
+    conn = open_connection()
+    with conn.cursor() as cursor:
+        cursor.execute("SELECT c.customer_name, c.customer_city FROM customer c, borrower b, loan l WHERE c.customer_name = b.customer_name AND b.loan_number = l.loan_number AND l.branch_name = 'Perryridge';")
+        customers = cursor.fetchall()
+        return customers   
 
 def get_songs_by_title(title):
     conn = open_connection()

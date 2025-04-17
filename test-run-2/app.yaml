@@ -17,7 +17,7 @@ resources:
   disk_size_gb: 10
 
 env_variables:
-  CLOUD_SQL_USERNAME:  
-  CLOUD_SQL_PASSWORD: 
-  CLOUD_SQL_DATABASE_NAME: 
-  CLOUD_SQL_CONNECTION_NAME: 
+  CLOUD_SQL_USERNAME: hood-amh52-user
+  CLOUD_SQL_PASSWORD: password
+  CLOUD_SQL_DATABASE_NAME: database-project
+  CLOUD_SQL_CONNECTION_NAME: hood-amh52:us-central1:hood-amh52-instance

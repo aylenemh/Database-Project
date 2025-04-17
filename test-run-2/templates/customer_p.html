@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  <h1>Customers with loan at Perryridge</h1>
+    <table>
+    <tr><th>Customer Name</th><th>Customer City</th></tr>
+    {% for customer in customers %}
+      <tr><td>{{customer.customer_name}}</td> <td>{{customer.customer_city}}</td></tr>
+    {% endfor %}
+    </table>
+{% endblock %}
